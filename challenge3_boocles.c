@@ -2,22 +2,25 @@
 
 int main()                                         
 {                 
-            int N  , i ;
-            float D ;
+            int N  , i ,D , resultat;
+            
             
             printf("entrer un nombre entier:");
             scanf("%d",&N);
-            for(i=2 ; i<N; i++)
-                D=N%i;
-                 if ( D!=0 ){
-                   printf("  cette nomber est  premier  ");
-                 }
-               else 
-                   printf("  cette nomber est pas premier  ");
+            resultat =0 ;
+            for(i=1 ; i<=N; i++){
+               D=N%i;
             
-        
-        
-        
+                if(D==0){
+              
+                 resultat=resultat + 1 ;
+                }
+                }
+                   if(resultat==2)
+                        printf(" premier");
+                   else if(resultat>2) 
+                        printf("pas premier");
+                
            
     return 0;
 }
